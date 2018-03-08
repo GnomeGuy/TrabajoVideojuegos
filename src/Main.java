@@ -18,6 +18,5 @@ public class Main {
         System.out.println(d1.buscarJuego(v3));
         System.out.println(t1.juegosLanzamiento(f2));
         System.out.println(t1.shortNames());
-        System.out.println(v1.añosEnMercado());
     }
 }
