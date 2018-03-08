@@ -37,6 +37,11 @@ public class Videojuego {
         return false;
     }
 
+    public long getTiempoLanzamiento(Fecha fechaActual){
+        long actual = fechaActual.getTimeInMillis()/1000;
+        long lanzamiento = getLanzamiento().getTimeInMillis()/1000;
+            return (((actual-lanzamiento)/3600)/8760);
+    }
 
     public Fecha getLanzamiento() {
         return lanzamiento;
