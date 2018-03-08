@@ -15,6 +15,25 @@ public class Consola {
         return false;
     }
 
+    public void diversidad(){
+        int count = 0;
+        ArrayList<Videojuego> categorias = new ArrayList<>();
+        Videojuego aux;
+        for (int i = 0; i < juegosCompatibles.size(); i++){
+            for (int a = 0; a < juegosCompatibles.size();a++){
+            if (!juegosCompatibles.get(i).genero.equals(juegosCompatibles.get(a).genero) && !categorias.contains(juegosCompatibles.get(a))){
+             count++;
+             categorias.add(juegosCompatibles.get(a));
+            }
+        }
+        }
+        if (count>=10){
+            System.out.println("La consola tiene diversidad.");
+        }
+        else{
+            System.out.println("La consola no tiene diversidad.");
+            }
+    }
     public Consola(String nombre) {
         this.nombre = nombre;
     }
