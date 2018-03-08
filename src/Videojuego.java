@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 
 public class Videojuego {
 
@@ -13,7 +14,7 @@ public class Videojuego {
         this.director = director;
         this.lanzamiento = lanzamiento;
     }
-
+    // Método que si le indicas un género y un creador a un videojuego te indique si es o no de ese género y si pertenece a ese director
     public void esGeneroYDirector(String gen, Director dic){
         if (genero.equals(gen) && director.equals(dic)){
             System.out.println("Es del mismo genero y del mismo director");
@@ -28,6 +29,14 @@ public class Videojuego {
             System.out.println("No es ni del mismo genero, ni del mismo director");
         }
     }
+
+    // Método que compara si dos videojuegos son iguales.
+
+    public boolean comparar(Videojuego v){
+        if (this.equals(v)) return true;
+        return false;
+    }
+
 
     public Fecha getLanzamiento() {
         return lanzamiento;

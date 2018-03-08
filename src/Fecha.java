@@ -2,6 +2,10 @@ import java.util.GregorianCalendar;
 
 public class Fecha extends GregorianCalendar{
 
+    public Fecha(){
+        super();
+    }
+
     public Fecha(int day, int month, int year){
         super(year, month,day);
     }
