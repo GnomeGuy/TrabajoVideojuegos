@@ -15,7 +15,7 @@ public class Consola {
         return false;
     }
 
-    public void diversidad(){
+    public boolean diversidad(){
         int count = 0;
         ArrayList<Videojuego> categorias = new ArrayList<>();
         Videojuego aux;
@@ -28,10 +28,10 @@ public class Consola {
         }
         }
         if (count>=10){
-            System.out.println("La consola tiene diversidad.");
+            return true;
         }
         else{
-            System.out.println("La consola no tiene diversidad.");
+           return false;
             }
     }
     public Consola(String nombre) {

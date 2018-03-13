@@ -11,10 +11,10 @@ public class Director {
     }
 
 
-    // Da siempre el mismo juego. Por solucionar
+    // Método que devuelve un juego del mismo director
     public Videojuego buscarJuego(Videojuego game) {
         for (Videojuego v: games){
-            if (v.equals(game)){
+            if (v.director.equals(game) && !v.nombre.equals(game)){
                 return v;
             }
         }
