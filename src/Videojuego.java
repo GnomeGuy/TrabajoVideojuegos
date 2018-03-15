@@ -33,7 +33,8 @@ public class Videojuego {
     // Método que compara si dos videojuegos son iguales.
 
     public boolean comparar(Videojuego v){
-        if (this.equals(v)) return true;
+        if (this == null || v == null) return false;
+        if (this.nombre.equals(v.nombre) && this.director.equals(v.director) && this.genero.equals(genero) && this.lanzamiento.equals(lanzamiento)) return true;
         return false;
     }
 
