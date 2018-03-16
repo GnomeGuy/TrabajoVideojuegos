@@ -10,7 +10,6 @@ public class CompararPrueba extends Contador{
     static Videojuego v3;
     static Videojuego v4;
     static Videojuego v5;
-    static int contador;
 
 
     @BeforeAll
@@ -22,7 +21,6 @@ public class CompararPrueba extends Contador{
         v3 = new Videojuego("Fornite", "BR", d1, f1);
         v4 = null;
         v5 = v1;
-        contador = 1;
     }
 
 
@@ -36,6 +34,8 @@ public class CompararPrueba extends Contador{
         v1 = null;
         v2 = null;
         v3 = null;
+        v4 = null;
+        v5 = null;
     }
     /**
      *Prueba que comprueba si es falso el resultado.

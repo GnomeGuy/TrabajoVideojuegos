@@ -15,19 +15,23 @@ public class Videojuego {
         this.lanzamiento = lanzamiento;
     }
     // Método que si le indicas un género y un creador a un videojuego te indique si es o no de ese género y si pertenece a ese director
-    public void esGeneroYDirector(String gen, Director dic){
+    public String esGeneroYDirector(String gen, Director dic){
+        if (gen == null || dic == null){
+            return "Error - El genero o el director";
+        }
         if (genero.equals(gen) && director.equals(dic)){
-            System.out.println("Es del mismo genero y del mismo director");
+            return "Es del mismo genero y del mismo director";
         }
         if (!genero.equals(gen) && director.equals(dic)){
-            System.out.println("No es del mismo genero, pero si es del mismo director");
+            return ("No es del mismo genero, pero si es del mismo director");
         }
         if (genero.equals(gen) && !director.equals(dic)){
-            System.out.println("Es del mismo genero, pero no es del mismo director");
+           return ("Es del mismo genero, pero no es del mismo director");
         }
         if (!genero.equals(gen) && !director.equals(dic)){
-            System.out.println("No es ni del mismo genero, ni del mismo director");
+            return ("No es ni del mismo genero, ni del mismo director");
         }
+        return null;
     }
 
     // Método que compara si dos videojuegos son iguales.
