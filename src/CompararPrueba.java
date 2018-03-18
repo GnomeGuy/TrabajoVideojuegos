@@ -37,40 +37,35 @@ public class CompararPrueba extends Contador{
         v4 = null;
         v5 = null;
     }
-    /**
-     *Prueba que comprueba si es falso el resultado.
-     */
+
+    @DisplayName("Prueba que comprueba si es falso el resultado.")
     @Test
     void pruebaUno(){
         assertFalse(v1.comparar(v3));
     }
-    /**
-     *Prueba que comprueba si es verdadero el resultado.
-     */
+
+    @DisplayName("Prueba que comprueba si es verdadero el resultado.")
     @Test
     void pruebaDos(){
         assertTrue(v1.comparar(v2));
     }
 
-    /**
-     * Prueba que comprueba que el resultado no sea correcto al meterle un null.
-     */
+
+    @DisplayName("Prueba que comprueba que el resultado no sea correcto al meterle un null.")
     @Test
     void pruebaTres(){
         assertFalse(v1.comparar(v4));
     }
 
-    /**
-     * Prueba que comprueba si al compararlo consigo mismo da correcto.
-     */
+
+    @DisplayName("Prueba que comprueba si al compararlo consigo mismo da correcto.")
     @Test
     void pruebaCuatro(){
         assertTrue(v1.comparar(v1));
     }
 
-    /**
-     * Prueba que compreuba si da correcto con un objeto que tiene la misma referencia.
-     */
+
+    @DisplayName("Prueba que compreuba si da correcto con un objeto que tiene la misma referencia.")
     @Test
     void pruebaCinco(){
         assertTrue(v1.comparar(v5));

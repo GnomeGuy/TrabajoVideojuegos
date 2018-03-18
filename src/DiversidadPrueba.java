@@ -95,25 +95,19 @@ public class DiversidadPrueba extends Contador{
         v11 = null;
     }
 
-    /**
-     * Comprueba que tiene diversidad
-     */
+    @DisplayName("Comprueba que tiene diversidad.")
     @Test
     void pruebaUno(){
         assertTrue(c1.diversidad());
     }
 
-    /**
-     * Comprueba que no tiene diversidad con un juego menos
-     */
+    @DisplayName("Comprueba que no tiene diversidad con un juego menos.")
     @Test
     void PruebaDos(){
         assertFalse(c2.diversidad());
     }
 
-    /**
-     * Comprueba que no tiene diversidad con 10 juegos y dos juegos del mismo genero
-     */
+    @DisplayName("Comprueba que no tiene diversidad con 10 juegos y dos juegos del mismo genero.")
     @Test
     void PruebaTres(){
         assertFalse(c3.diversidad());
