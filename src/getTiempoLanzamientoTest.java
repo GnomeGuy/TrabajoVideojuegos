@@ -3,7 +3,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class getTiempoLanzamientoTest {
+class getTiempoLanzamientoTest extends Contador {
 
     static Director d1;
     static Fecha f1;
@@ -19,6 +19,11 @@ class getTiempoLanzamientoTest {
         v1 = new Videojuego("CSGOOO","FPS", d1,f1);
         actual2 = new Fecha(11,1,2000);
     }
+    @AfterEach
+    void afterEach() {
+        super.afterEach();
+    }
+    @DisplayName("Método que te devuelva todos los videojuegos a partir de una fecha de lanzamiento.")
     @Test
     void prueba1(){
         assertEquals(2,v1.getTiempoLanzamiento(actual));
