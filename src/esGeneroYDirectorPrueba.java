@@ -6,7 +6,6 @@ public class esGeneroYDirectorPrueba extends Contador{
 
 
     static Videojuego v1;
-    static Videojuego v2;
     static Director d1;
     static Director d2;
 
@@ -16,7 +15,6 @@ public class esGeneroYDirectorPrueba extends Contador{
         d2  = new Director("Pepe");
         Fecha f1 = new Fecha();
         v1 = new Videojuego("CSGO", "FPS", d1, f1);
-        v2 = null;
     }
 
 
@@ -28,7 +26,6 @@ public class esGeneroYDirectorPrueba extends Contador{
     @AfterAll
     static void nulear(){
         v1 = null;
-        v2 = null;
         d1 = null;
         d2 = null;
     }
@@ -67,7 +64,7 @@ public class esGeneroYDirectorPrueba extends Contador{
     @DisplayName("Prueba que comprueba que sea correcto añadiendo null al director.")
     @Test
     void pruebaCinco(){
-        String resultadoEsperado = "Error - El genero o el director";
+        String resultadoEsperado = "Error - El genero o el director no son validos";
         assertEquals(resultadoEsperado, v1.esGeneroYDirector("FPS", null));
     }
 
@@ -75,7 +72,7 @@ public class esGeneroYDirectorPrueba extends Contador{
     @DisplayName("Prueba que comprueba que sea correcto añadiendo null al genero.")
     @Test
     void pruebaSeis(){
-        String resultadoEsperado = "Error - El genero o el director";
+        String resultadoEsperado = "Error - El genero o el director no son validos";
         assertEquals(resultadoEsperado, v1.esGeneroYDirector(null, d1));
     }
 }

@@ -17,7 +17,7 @@ public class Videojuego {
     // Método que si le indicas un género y un creador a un videojuego te indique si es o no de ese género y si pertenece a ese director
     public String esGeneroYDirector(String gen, Director dic){
         if (gen == null || dic == null){
-            return "Error - El genero o el director";
+            return "Error - El genero o el director no son validos";
         }
         if (genero.equals(gen) && director.equals(dic)){
             return "Es del mismo genero y del mismo director";
