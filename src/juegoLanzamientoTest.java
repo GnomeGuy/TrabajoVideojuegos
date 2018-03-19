@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class juegoLanzamientoTest extends Contador {
+class juegoLanzamientoTest {
 
     static Director d1;
     static Director d2;
@@ -32,7 +32,7 @@ class juegoLanzamientoTest extends Contador {
         t1 = new Tienda();
         d1 = new Director("Pepe");
         d2 = new Director("Cabesa");
-        f1 = new Fecha(16,4,2018);
+        f1 = new Fecha();
         actual = new Fecha(17,4,2020);
         actual2 = new Fecha(16,4,2020);
         v1 = new Videojuego("Juego1","FPS", d1,actual);
@@ -56,9 +56,10 @@ class juegoLanzamientoTest extends Contador {
         t1.agregar(v5);
         t1.agregar(v6);
     }
+    static int contador = 0;
     @AfterEach
-    void afterEach() {
-        super.afterEach();
+    void contador (){
+        System.out.println( "Pruebas realizadas: " + ++contador + "\n");
     }
     @DisplayName("Método que calcula cuantos años lleva el juego de lanzamiento.")
     @Test
