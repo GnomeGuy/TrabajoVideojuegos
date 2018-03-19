@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 
-public class Contador {
+    public class Contador {
 
         static int contador = 0;
 
