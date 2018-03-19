@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 public class Tienda {
 
+    public Tienda(){
+
+    }
+
     ArrayList<Videojuego> stock = new ArrayList<>();
 
     // Método que tedevuelva todos los videojuegos a partir de una fecha de lanzamiento.
